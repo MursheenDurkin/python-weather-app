@@ -60,8 +60,8 @@ Choose units (m for metric, i for imperial): m
 ### 1. Clone the repo
 
 ```bash
-git clone https://github.com/barneyhk1804/Network-Programmability-ACCB5029-.git
-cd Network-Programmability-ACCB5029-
+git clone https://github.com/barneyhk1804/python-weather-app.git
+cd python-weather-app
 ```
 
 ### 2. (Recommended) Create a virtual environment
