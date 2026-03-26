@@ -1,79 +1,149 @@
-Within this repository contains two files Uniwork.Py And testwork.py
+# 🌤 Python Weather App
 
-To run the code properly make sure. make sure you have first updated your virtual box depending on what you're using, but I would recommend using this in a virtual machine.
+![Python](https://img.shields.io/badge/Python-3.10%2B-blue?style=for-the-badge&logo=python&logoColor=white)
+![OpenWeatherMap](https://img.shields.io/badge/OpenWeatherMap-API-orange?style=for-the-badge&logo=OpenWeatherMap&logoColor=white)
+![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
+![Status](https://img.shields.io/badge/Status-Active-brightgreen?style=for-the-badge)
 
-Then open your terminal and do the following
+A command-line weather app built in Python. Type in a city, get the current weather — simple as that. Built as one of my first Python projects while learning the basics of APIs, `requests`, and version control with Git.
 
-git clone https://github.com/barneyhk1804/Network-Programmability-ACCB5029-.git
+---
 
-cd Network-Programmability-ACCB5029-
+## 📦 Scripts
 
-Then choose either Uniwork.Py or testwork.py
+| File | Description |
+|------|-------------|
+| `weather_basic.py` | Basic weather — temperature, description, humidity & wind speed |
+| `weather_extended.py` | Extended weather — everything above plus pressure, visibility, sunrise & sunset. Supports Metric & Imperial! |
 
-lets say u want testwork.py
+---
 
-python3 testwork.py
+## 🖥️ Example Output
 
-Then it will prompt you to other city.
+**weather_basic.py**
+```
+Enter the city name: Belfast
 
+┌──────────────────────────────────────┐
+  Belfast, GB
+├──────────────────────────────────────┤
+  🌡  Temperature : 1.88°C
+  🌤  Description : Scattered clouds
+  💧  Humidity    : 88%
+  💨  Wind Speed  : 1.54 m/s
+└──────────────────────────────────────┘
+```
 
-
-Uniwork.Py will show this when ran
-
-Enter the city name: 
-
-lets say we put in belfast
-
-Enter the city name: belfast
-Current weather in Belfast:
-Temperature: 1.88°C
-Description: scattered clouds
-Humidity: 88%
-Wind Speed: 1.54 m/
-
-From here, it will show the basic things like temperature, description, humidity along with wind speed
-just basic information about the weather in the current city you have chosen.
-
-
-testwork.py
-
-Same again for this one, but it has a little bit more information
-It'll ask you to enter a city. I decided to put down Swansea.
-Then it'll ask you if you would like it in Metric or imperial You can select either M or I. saved you writing up the entire thing for either one as showing below
-
-enter the city name: swansea
+**weather_extended.py** (Metric)
+```
+Enter the city name: Swansea
 Choose units (m for metric, i for imperial): m
-I chose metric for this one.
 
+┌──────────────────────────────────────────────┐
+  Swansea, GB  [Metric]
+├──────────────────────────────────────────────┤
+  🌡  Temperature  : 3.21°C
+  🌤  Description  : Light rain
+  💧  Humidity     : 79%
+  💨  Wind Speed   : 1.79 m/s
+  🔵  Pressure     : 997 hPa
+  👁   Visibility   : 10,000 m
+  🌅  Sunrise      : 08:20:39  (city local time)
+  🌇  Sunset       : 16:22:14  (city local time)
+└──────────────────────────────────────────────┘
+```
 
-Current weather in Swansea:
-Temperature: 3.21°C
-Description: light rain
-Humidity: 79%
-Wind Speed: 1.79 m/s
-Pressure: 997 hPa
-Visibility: 10000 meters
-Sunrise: 08:20:39
-Sunset: 16:22:14
+---
 
-And here it is in Imperial
+## 🚀 Getting Started
 
-Enter the city name: swansea
-Choose units (m for metric, i for imperial): i
+### 1. Clone the repo
 
-Current weather in Swansea:
-Temperature: 37.8°F
-Description: broken clouds
-Humidity: 79%
-Wind Speed: 7 m/s
-Pressure: 997 hPa
-Visibility: 10000 meters
-Sunrise: 08:20:39
-Sunset: 16:22:14
+```bash
+git clone https://github.com/barneyhk1804/Network-Programmability-ACCB5029-.git
+cd Network-Programmability-ACCB5029-
+```
 
+### 2. (Recommended) Create a virtual environment
 
-In this script. it will show you pressure, visibility as well as sunrise and sunset. A little bit more information if you would like it.
+```bash
+python3 -m venv .venv
+source .venv/bin/activate        # macOS / Linux
+.venv\Scripts\activate           # Windows
+```
 
+### 3. Install dependencies
 
+```bash
+pip install -r requirements.txt
+```
 
+### 4. Set up your API key 🔐
 
+This app uses the [OpenWeatherMap API](https://openweathermap.org/api). The free tier is more than enough.
+
+1. Create a free account at [openweathermap.org](https://openweathermap.org/)
+2. Go to **API Keys** in your dashboard and copy your key
+3. Create a `.env` file in the project root:
+
+```
+OPENWEATHER_API_KEY=your_key_here
+```
+
+> ⚠️ Never commit your `.env` file — it's already listed in `.gitignore` so you're covered.
+
+> ⏳ New keys can take up to 10 minutes to activate after creation.
+
+### 5. Run it
+
+```bash
+# Basic version
+python3 weather_basic.py
+
+# Extended version
+python3 weather_extended.py
+
+# You can also pass the city directly as an argument
+python3 weather_basic.py Belfast
+python3 weather_extended.py New York
+```
+
+---
+
+## 📁 Project Structure
+
+```
+├── weather_basic.py      # Basic weather script
+├── weather_extended.py   # Extended weather script with unit choice
+├── requirements.txt      # Python dependencies
+├── .env                  # Your API key (not committed — see .gitignore)
+├── .gitignore            # Ignores .env, __pycache__, venv, etc.
+└── README.md
+```
+
+---
+
+## 🛠️ Built With
+
+- [Python 3](https://www.python.org/)
+- [requests](https://pypi.org/project/requests/) — HTTP calls to the weather API
+- [python-dotenv](https://pypi.org/project/python-dotenv/) — loads API key from `.env`
+- [OpenWeatherMap API](https://openweathermap.org/api) — weather data source
+
+---
+
+## 📋 Requirements
+
+- Python 3.10+
+- Dependencies listed in `requirements.txt`
+- A free OpenWeatherMap API key
+
+---
+
+## 🙋 About
+
+This was one of my first Python projects — built while getting to grips with APIs, the `requests` library, and using Git/GitHub for version control. It's been cleaned up since the original version with better error handling, secure API key management, and proper project structure.
+
+---
+
+*Made with ☕ and a lot of trial and error*
