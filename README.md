@@ -60,7 +60,7 @@ Choose units (m for metric, i for imperial): m
 ### 1. Clone the repo
 
 ```bash
-git clone https://github.com/barneyhk1804/python-weather-app.git
+git clone https://github.com/MursheenDurkin/python-weather-app.git
 cd python-weather-app
 ```
 
