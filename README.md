@@ -5,7 +5,7 @@
 ![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
 ![Status](https://img.shields.io/badge/Status-Active-brightgreen?style=for-the-badge)
 
-A command-line weather app built in Python. Type in a city, get the current weather — simple as that. Built as one of my first Python projects while learning the basics of APIs, `requests`, and version control with Git.
+A command-line weather app built in Python. Type in a city, get the current weather, simple as that. Built as one of my first Python projects while learning the basics of APIs, `requests`, and version control with Git.
 
 ---
 
@@ -13,8 +13,8 @@ A command-line weather app built in Python. Type in a city, get the current weat
 
 | File | Description |
 |------|-------------|
-| `weather_basic.py` | Basic weather — temperature, description, humidity & wind speed |
-| `weather_extended.py` | Extended weather — everything above plus pressure, visibility, sunrise & sunset. Supports Metric & Imperial! |
+| `weather_basic.py` | Basic weather: temperature, description, humidity & wind speed |
+| `weather_extended.py` | Extended weather: everything above plus pressure, visibility, sunrise & sunset. Supports Metric & Imperial! |
 
 ---
 
@@ -90,7 +90,7 @@ This app uses the [OpenWeatherMap API](https://openweathermap.org/api). The free
 OPENWEATHER_API_KEY=your_key_here
 ```
 
-> ⚠️ Never commit your `.env` file — it's already listed in `.gitignore` so you're covered.
+> ⚠️ Never commit your `.env` file, it's already listed in `.gitignore` so you're covered.
 
 > ⏳ New keys can take up to 10 minutes to activate after creation.
 
@@ -116,7 +116,7 @@ python3 weather_extended.py New York
 ├── weather_basic.py      # Basic weather script
 ├── weather_extended.py   # Extended weather script with unit choice
 ├── requirements.txt      # Python dependencies
-├── .env                  # Your API key (not committed — see .gitignore)
+├── .env                  # Your API key (not committed, see .gitignore)
 ├── .gitignore            # Ignores .env, __pycache__, venv, etc.
 └── README.md
 ```
@@ -126,9 +126,9 @@ python3 weather_extended.py New York
 ## 🛠️ Built With
 
 - [Python 3](https://www.python.org/)
-- [requests](https://pypi.org/project/requests/) — HTTP calls to the weather API
-- [python-dotenv](https://pypi.org/project/python-dotenv/) — loads API key from `.env`
-- [OpenWeatherMap API](https://openweathermap.org/api) — weather data source
+- [requests](https://pypi.org/project/requests/): HTTP calls to the weather API
+- [python-dotenv](https://pypi.org/project/python-dotenv/): loads API key from `.env`
+- [OpenWeatherMap API](https://openweathermap.org/api): weather data source
 
 ---
 
@@ -142,7 +142,7 @@ python3 weather_extended.py New York
 
 ## 🙋 About
 
-This was one of my first Python projects — built while getting to grips with APIs, the `requests` library, and using Git/GitHub for version control. It's been cleaned up since the original version with better error handling, secure API key management, and proper project structure.
+This was one of my first Python projects, built while getting to grips with APIs, the `requests` library, and using Git/GitHub for version control. It's been cleaned up since the original version with better error handling, secure API key management, and proper project structure.
 
 ---
 
